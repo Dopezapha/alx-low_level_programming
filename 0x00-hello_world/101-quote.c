@@ -1,14 +1,23 @@
-#include <stdio.h>
 #include <unistd.h>
+
 /**
-* main - Entry point
-*
-* Description: The C program that prints a message to standard error.
-*
-* Return: Always 1 (success)
-*/
+ * main - Entry point
+ *
+ * Description: Prints a specific quote to the standard error.
+ *
+ * Return: Always 1 (success)
+ */
+
 int main(void)
 {
-	fputs("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", stdout);
+	char msg[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+
+	int i = 0;
+
+	while (msg[i] != '\0')
+	{
+		write(2, &msg[i], 1);
+		i++;
+	}
 	return (1);
 }

@@ -17,11 +17,14 @@ int main(void)
 	c = 'a';
 	d = 'A';
 	while (c <= 'z' && d <= 'Z')
-
 	{
 	putchar(c);
-	putchar(d);
 	c = c + 1;
+	}
+
+	while (d <= 'Z')
+	{
+	putchar(d);
 	d = d + 1;
 	}
 

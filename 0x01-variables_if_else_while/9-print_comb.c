@@ -16,9 +16,12 @@ int main(void)
 
 	for (a = 0 ; a < 10 ; a++)
 	{
-		putchar(a);
+	putchar('0' + a);
+	if (a < 7)
+		{
 		putchar('.');
 		putchar(' ');
+		}
 	}
 
 	putchar('\n');

@@ -16,8 +16,6 @@
 	for (a = 0 ; a < 10 ; a++)
 	{
 	printf("%d", a);
-	if (a < 9)
-	printf(" ");
 	}
 
 	printf("\n");

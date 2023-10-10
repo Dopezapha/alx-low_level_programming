@@ -10,15 +10,18 @@
 
 int main(void)
 {
-	char c[] = "_putchar";
+	char c[] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r', '\0'};
 
-	for (int a = 0; c[a] != '\0'; a++)
+	int a = 0;
+
+	while (c[a] != '\0')
+	a = a + 1;
 
 	{
-	_putchar(c[a]);
+	putchar(c[a]);
 	}
 
-	_putchar('\n');
+	putchar('\n');
 
 	return (0);
 }

@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
 * main - Entry point
 *
@@ -10,18 +10,22 @@
 
 int main(void)
 {
-	char c[] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r', '\0'};
+	_putchar('_');
 
-	int a = 0;
+	_putchar('p');
 
-	while (c[a] != '\0')
-	a = a + 1;
+	_putchar('u');
 
-	{
-	putchar(c[a]);
-	}
+	_putchar('t');
 
-	putchar('\n');
+	_putchar('c');
+
+	_putchar('h');
+
+	_putchar('a');
+
+	_putchar('r');
 
 	return (0);
+
 }

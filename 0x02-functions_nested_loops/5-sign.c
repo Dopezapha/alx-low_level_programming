@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isalpha - A function that checks for alphabetic character.
+ * print_sign - A function that prints the sign of a number.
  *
  * @n: The character to be checked.
  *

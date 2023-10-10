@@ -9,10 +9,9 @@
 void print_alphabet_x10(void)
 {
 
-	char c, d
+	char c
 
-	c = 0;
-	for (int c = 0; c <= 10; c++)
+	for (c = 0; c <= 10; c++)
 	{
 	d = 'a';
 	while (d <= 'z')
@@ -21,5 +20,5 @@ void print_alphabet_x10(void)
 	c++;
 	}
 	}
-	putchar('\n')
+	putchar('\n');
 }

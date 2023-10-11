@@ -17,8 +17,9 @@ a = -n % 10;
 }
 else
 {
-(a = n % 10)
+a = n % 10
 }
 _putchar(a + '0');
+
 return (a);
 }

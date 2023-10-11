@@ -1,48 +1,23 @@
 #include "main.h"
 
 /**
-* print_times_table - print a times table for a given number
-* @n: The value for the times table
+* main - A grogram program that computes and prints the
+*
+* sum of all the multiples of 3 or 5 below 1024 (excluded).
+*
+* Return: 0
 */
 
-void print_times_table(int n)
+int main(void)
 {
-	int num, mult, prod;
+	int sum = 0;
+	int a;
 
-	if (n >= 0 && n <= 15)
+	for (a = 0; a < 1024; a++)
 	{
-	for (num = 0; num <= n; num++)
-	{
-	for (mult = 0; mult <= n; mult++)
-		{
-		prod = num * mult;
-		if (mult > 0)
-		{
-		_putchar(',');
-		_putchar(' ');
-		if (prod <= 9)
-		_putchar(' ');
-		}
-		if (prod <= 99)
-		_putchar(' ');
-		if (prod >= 100)
-		{
-		_putchar((prod / 100) + '0');
-		_putchar(((prod / 10) % 10) + '0');
-		}
-		else if (prod >= 10)
-		{
-		_putchar(' ');
-		_putchar((prod / 10) + '0');
-		}
-		else if (mult > 0)
-		{
-		_putchar(' ');
-		_putchar(' ');
-		}
-		_putchar((prod % 10) + '0');
-		}
-	_putchar('\n');
+	if (a % 3 == 0 || a % 5 == 0)
+	sum = sum + a;
 	}
-	}
+	printf("%d\n", sum);
+	return (0);
 }

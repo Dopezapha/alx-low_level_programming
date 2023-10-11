@@ -15,7 +15,7 @@ int main(void)
 	unsigned long int next;
 	int c;
 
-	printf("%dlu, ", a);
+	printf("%lu, ", a);
 	for (c = 1; c < 50; c++)
 	{
 	printf("%lu", b);

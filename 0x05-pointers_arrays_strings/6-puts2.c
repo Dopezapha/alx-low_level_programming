@@ -1,11 +1,11 @@
 #include "main.h"
 /**
-*puts2 -  print every other character of a string
+*puts2 -  prints the character of a string
 *followed by a new line.
 *@str: string to be printed
 */
-	void puts2(char *str)
-	{
+void puts2(char *str)
+{
 	int i = 0;
 
 	while (str[i] != '\0')
@@ -14,4 +14,4 @@
 	i += 2;
 	}
 	_putchar('\n');
-	}
+}

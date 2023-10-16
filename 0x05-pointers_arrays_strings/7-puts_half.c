@@ -1,11 +1,11 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * puts_half - function that prints the second half of a string.
  * @str: string to be printed
- * Return: Always returns 0
  */
-int puts_half(char *str)
+void puts_half(char *str)
 {
 	int i;
 	int j;
@@ -19,5 +19,5 @@ int puts_half(char *str)
 	_putchar(str[j]);
 	j++;
 	}
-	return (0);
+	_putchar('\n');
 }

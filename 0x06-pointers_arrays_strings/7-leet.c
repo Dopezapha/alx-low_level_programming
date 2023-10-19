@@ -1,34 +1,29 @@
-#include"main.h"
-#include <string.h>
-
+#include "main.h"
+#include <stdio.h>
 /**
-* leet - Encode a string into 1337.
-* @p: The input string to be encoded.
-* Return: A pointer to the modified input string (p).
+*leet - Encode a string into 1337.
+*
+*@p: The input string to be encoded.
+*
+*Return: A pointer to the modified input string
 */
+
 char *leet(char *p)
 {
-	char *result = p;
+	int j, k;
+	char s1[] = "aAeEoOtTlL";
+	char s2[] = "4433007711";
 
-	while (*p)
+	for (j = 0; p[j] != '\0'; j++)
 	{
-	int is_lowercase = (*p >= 'a' && *p <= 'z');
-	int is_uppercase = (*p >= 'A' && *p <= 'Z');
-
-	if (is_lowercase || is_uppercase)
+	for (k = 0; k < 10; k++)
 	{
-	if ((*p == 'a' || *p == 'A'))
-	*p = '4';
-	else if ((*p == 'e' || *p == 'E'))
-	*p = '3';
-	else if ((*p == 'o' || *p == 'O'))
-	*p = '0';
-	else if ((*p == 't' || *p == 'T'))
-	*p = '7';
-	else if ((*p == 'l' || *p == 'L'))
-	*p = '1';
+	if (p[j] == s1[k])
+	{
+	p[j] = s2[k];
 	}
-	p++;
 	}
-	return (result);
+	}
+	return (p);
 }
+

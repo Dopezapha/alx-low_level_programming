@@ -1,28 +1,28 @@
 #include "main.h"
 
 /**
-* rev_string - reverse array
-* @n: integer params
-* Return: 0
+*rev_string - reverse array
+*@n: integer parameter
+* Return: Always 0
 */
 
 void rev_string(char *n)
 {
-	int i = 0;
-	int j = 0;
+	int a = 0;
+	int b = 0;
 	char temp;
 
-	while (*(n + i) != '\0')
+	while (*(n + a) != '\0')
 	{
-	i++;
+	a++;
 	}
-	i--;
+	a--;
 
-	for (j = 0; j < i; j++, i--)
+	for (b = 0; b < a; b++, a--)
 	{
-	temp = *(n + j);
-	*(n + j) = *(n + i);
-	*(n + i) = temp;
+	temp = *(n + b);
+	*(n + b) = *(n + a);
+	*(n + a) = temp;
 	}
 }
 

@@ -7,11 +7,6 @@
 */
 int main(int argc __attribute__((unused)), char *argv[])
 {
-int a;
-for (a = 0; argv[0][a] != '\0'; a++)
-{
-_putchar(argv[0][a]);
-}
-_putchar('\n');
+printf("%s\n", argv[0]);
 return (0);
 }

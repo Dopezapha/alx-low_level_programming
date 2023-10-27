@@ -11,6 +11,8 @@
 int main(int argc, char *argv[])
 {
 int cents, coins = 0;
+int denominations[] = {25, 10, 5, 2, 1};
+int i = 0;
 
 if (argc != 2)
 {
@@ -25,25 +27,14 @@ return (1);
 }
 while (cents > 0)
 {
-if (cents >= 25)
+if (cents >= denominations[i])
 {
-coins += cents / 25;
-cents %= 25;
-}
-else if (cents >= 10)
-{
-coins += cents / 10;
-cents %= 10;
-}
-else if (cents >= 5)
-{
-coins += cents / 5;
-cents %= 5;
+cents -= denominations[i];
+coins++;
 }
 else
 {
-coins += cents;
-break;
+i++;
 }
 }
 printf("%d\n", coins);

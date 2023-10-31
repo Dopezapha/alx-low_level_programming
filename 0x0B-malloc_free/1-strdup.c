@@ -2,24 +2,22 @@
 #include <string.h>
 #include <stdlib.h>
 /**
-*_strdup - allocates a space in memory and makes
-*a copy of the string given as a parameter.
-*@str: the string to be considered
-*Return: Always return a pointer to the string.
+* _strdup - duplicates a string in memory.
+* @str: the string to be duplicated
+* Return: A pointer to the duplicated string or NULL on failure.
 */
 char *_strdup(char *str)
 {
 char *ptstr;
-int a;
 int i;
-if (str == 0)
+int len;
+
+if (str == NULL)
 {
 return (NULL);
 }
-for (a = 0; str[a] != '\0'; a++)
-{
-ptstr = malloc(a * sizeof(char) + 1);
-}
+len = strlen(str);
+ptstr = (char *)malloc((len + 1) * sizeof(char));
 if (ptstr == NULL)
 {
 return (NULL);
@@ -31,3 +29,4 @@ ptstr[i] = str[i];
 ptstr[i] = '\0';
 return (ptstr);
 }
+

@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <string.h>
-
 /**
 * str_concat - concatenate two strings.
 * @s1: string to be considered
@@ -27,7 +26,7 @@ char *str_concat(char *s1, char *s2)
 	{
 	}
 	}
-	ptr = (char *)malloc(len1 + len2 + 1);
+	ptr = malloc((len1 + len2) * sizeof(char)+ 1);
 
 	if (ptr == NULL)
 	{

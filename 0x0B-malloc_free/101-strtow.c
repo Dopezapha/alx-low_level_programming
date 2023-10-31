@@ -8,26 +8,26 @@
 */
 int count_word(char *s)
 {
-	int check, y, x;
+	int check, a, b;
 
 	check = 0;
-	x = 0;
+	b = 0;
 
-	for (y = 0; s[y] != '\0'; y++)
+	for (a = 0; s[a] != '\0'; a++)
 	{
-		if (s[y] == ' ')
+		if (s[a] == ' ')
 			check = 0;
 		else if (check == 0)
 		{
 			check = 1;
-			x++;
+			b++;
 		}
 	}
 
-	return (x);
+	return (b);
 }
 /**
-* **strtow - splits a string into words
+* strtow - splits a string into words
 * @str: string to split
 * Return: pointer to an array of strings (Success)
 * or NULL (Error)

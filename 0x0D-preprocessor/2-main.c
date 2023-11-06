@@ -10,8 +10,7 @@
 int main(void)
 {
 #ifdef FILE_DEFINED
-printf("2-main.c");
-printf("\n");
+printf("%s\n", __FILE__);
 #endif
 return (0);
 }

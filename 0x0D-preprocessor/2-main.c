@@ -1,9 +1,4 @@
 #include <stdio.h>
-/**
-*main - a program that prints the name of the file
-*it was compiled from.
-*Return: Always return success.
-*/
 
 #define FILE_DEFINED
 

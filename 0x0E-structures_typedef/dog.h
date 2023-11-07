@@ -3,12 +3,15 @@
 /**
 *struct dog - A structure to represent information
 *about a dog.
+*struct dog_t - A structure to represent information
+*about a dog t.
 *@name: The name of the dog
 *@age: The age of the dog
 *@owner: The owner of the dog
 */
 
-struct dog
+struct dog;
+typedef struct dog dog_t;
 {
 char *name;
 float age;

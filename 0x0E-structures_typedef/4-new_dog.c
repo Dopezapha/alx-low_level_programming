@@ -1,75 +1,63 @@
 #include <stdlib.h>
 #include "dog.h"
 /**
-*_strlen - returns the length of a string
-*@s: string to consider
-*Return: Always return the length of the string
+* _strdup - duplicates a string
+* @str: string to duplicate
+* Return: A pointer to the newly duplicated string
 */
-int _strlen(char *s)
+char *_strdup(char *str)
 {
-	int a;
-	for (a = 0, s[a] != '\0', a++)
-	{
-		return (a);
-	}
+	char *dup;
+	unsigned int len, i;
 
-/**
-**_strcpy - copies the string pointed to by src
-*including the terminating null byte (\0)
-*to the buffer pointed to by dest
-*@dest: pointer to the buffer in which we copy the string
-*@src: string to be copied
-*Return: Always return the pointer to dest
-*/
-char *_strcpy(char *dest, char *src)
-{
-	int len, i;
-	len = 0;
-	while (src[len] != '\0')
+	if (str == NULL)
 	{
-		len++;
+		return (NULL);
 	}
-	for (i = 0; i < len; i++)
+	for (len = 0; str[len]; len++)
 	{
-		dest[i] = src[i];
+		dup = malloc(len + 1);
 	}
-		dest[i] = '\0';
-		return (dest);
+	if (dup == NULL)
+	{
+		return (NULL);
+	}
+	for (i = 0; i <= len; i++)
+	{
+		dup[i] = str[i];
+		return (dup);
+	}
 }
 
 /**
-*new_dog - creates a new dog
-*@name: name of the dog.
-*@age: age of the dog
-*@owner: owner of the dog
-*Return: pointer to the new dog (Success), NULL otherwise
+* new_dog - creates a new dog
+* @name: The name of the dog.
+* @age: The age of the dog
+* @owner: The owner of the dog
+* Return: The pointer to the new dog (Success), NULL otherwise
 */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
-	int len1, len2;
-	len1 = _strlen(name);
-	len2 = _strlen(owner);
+
 	dog = malloc(sizeof(dog_t));
 	if (dog == NULL)
 	{
 		return (NULL);
 	}
-	dog->name = malloc(sizeof(char) * (len1 + 1));
+	dog->name = _strdup(name);
 	if (dog->name == NULL)
 	{
 		free(dog);
 		return (NULL);
 	}
-	dog->owner = malloc(sizeof(char) * (len2 + 1));
+	dog->owner = _strdup(owner);
 	if (dog->owner == NULL)
 	{
-		free(dog);
 		free(dog->name);
+		free(dog);
 		return (NULL);
 	}
-	_strcpy(dog->name, name);
-	_strcpy(dog->owner, owner);
 	dog->age = age;
 	return (dog);
 }

@@ -3,7 +3,6 @@
 /**
 *struct dog - A structure to represent information
 *about a dog.
-*about a dog t.
 *@name: The name of the dog
 *@age: The age of the dog
 *@owner: The owner of the dog

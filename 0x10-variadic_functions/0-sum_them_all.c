@@ -15,7 +15,9 @@ int sum = 0;
 
 	va_start(na, n);
 	for (i = 0; i < n; i++)
+	{
 	sum += va_arg(na, int);
+	}
 	va_end(na);
 	return (sum);
 }

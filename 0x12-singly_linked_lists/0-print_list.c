@@ -28,7 +28,6 @@ if (h->next != NULL)
 printf(", ");
 }
 }
-
 printf("]\n");
 return (count);
 }

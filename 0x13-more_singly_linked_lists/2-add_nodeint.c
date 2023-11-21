@@ -12,7 +12,7 @@ listint_t *new; /* Declare a pointer to a new node */
 
 /* Allocate memory for the new node */
 new = malloc(sizeof(listint_t));
-if (!new)
+if (new == NULL)
 return (NULL); /* Return NULL if memory allocation fails */
 
 new->n = n; /* Assign the value of n to the new node's n member */

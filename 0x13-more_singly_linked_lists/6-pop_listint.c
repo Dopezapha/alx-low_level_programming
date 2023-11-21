@@ -11,7 +11,7 @@ listint_t *temp;
 int data;
 
 if (*head == NULL)
-return (0);
+return (NULL);
 
 /* Save the data of the head node */
 data = (*head)->n;

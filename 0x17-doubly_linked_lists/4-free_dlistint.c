@@ -12,7 +12,7 @@ dlistint_t *next_node;
 while (current != NULL)
 {
 next_node = current->next;
-free(current);              
+free(current);
 current = next_node;
 }
 }

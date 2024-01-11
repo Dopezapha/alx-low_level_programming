@@ -9,9 +9,10 @@
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 dlistint_t *current = head;
+unsigned int i;
 
 /* Traverse the list until reaching the desired index or the end of the list */
-for (unsigned int i = 0; current != NULL && i < index; i++)
+for (i = 0; current != NULL && i < index; i++)
 {
 current = current->next;
 }
